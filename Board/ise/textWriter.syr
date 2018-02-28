@@ -1,0 +1,918 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\xst
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.43 secs
+ 
+--> Parameter xsthdpdir set to E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\xst\projnav.tmp
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.43 secs
+ 
+--> Reading design: E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\textWriter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\textWriter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\textWriter"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : FPGA_textWriter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+loop_iteration_limit               : 9999
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd" in Library work.
+Entity <FPGA_textWriter> compiled.
+Entity <inverterIn> compiled.
+Entity <inverterIn> (Architecture <sim>) compiled.
+Entity <textWriter> compiled.
+Entity <beamerPeriphControls> compiled.
+Entity <blockRAM> compiled.
+Entity <blockRAM> (Architecture <Spartan3E>) compiled.
+Entity <blockRAMControl> compiled.
+Entity <blockRAMControl> (Architecture <RTL>) compiled.
+Entity <blockRAMAddressCounter> compiled.
+Entity <blockRAMAddressCounter> (Architecture <RTL>) compiled.
+Entity <beamerPeriphControls> (Architecture <struct>) compiled.
+Entity <beamerPeriphOperator> compiled.
+Entity <interpolatorCoefficients> compiled.
+Entity <interpolatorCoefficients> (Architecture <RTL>) compiled.
+Entity <DAC> compiled.
+Entity <DAC> (Architecture <order2>) compiled.
+Entity <offsetToUnsigned> compiled.
+Entity <offsetToUnsigned> (Architecture <RTL>) compiled.
+Entity <sawtoothGen> compiled.
+Entity <sawtoothGen> (Architecture <RTL>) compiled.
+Entity <interpolatorCalculatePolynom> compiled.
+Entity <interpolatorCalculatePolynom> (Architecture <RTL>) compiled.
+Entity <sinCosTable> compiled.
+Entity <sinCosTable> (Architecture <RTL>) compiled.
+Entity <periphSpeedController> compiled.
+Entity <periphSpeedController> (Architecture <RTL>) compiled.
+Entity <interpolatorShiftRegister> compiled.
+Entity <interpolatorShiftRegister> (Architecture <RTL>) compiled.
+Entity <interpolatorTrigger> compiled.
+Entity <interpolatorTrigger> (Architecture <RTL>) compiled.
+Entity <beamerPeriphOperator> (Architecture <struct>) compiled.
+Entity <textWriter> (Architecture <struct>) compiled.
+Entity <buff> compiled.
+Entity <buff> (Architecture <sim>) compiled.
+Entity <DFF> compiled.
+Entity <DFF> (Architecture <sim>) compiled.
+Entity <FPGA_textWriter> (Architecture <struct>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <FPGA_textWriter> in library <work> (architecture <struct>) with generics.
+	bitNb = 16
+
+Analyzing hierarchy for entity <DFF> in library <work> (architecture <sim>).
+
+Analyzing hierarchy for entity <buff> in library <work> (architecture <sim>).
+
+Analyzing hierarchy for entity <inverterIn> in library <work> (architecture <sim>).
+
+Analyzing hierarchy for entity <textWriter> in library <work> (architecture <struct>) with generics.
+	curvePointNb = 423
+	testOutBitNb = 16
+
+Analyzing hierarchy for entity <beamerPeriphOperator> in library <work> (architecture <struct>) with generics.
+	signalBitNb = 16
+	updatePeriodBitNb = 16
+
+Analyzing hierarchy for entity <beamerPeriphControls> in library <work> (architecture <struct>) with generics.
+	curvePointNb = 423
+	patternAddressBitNb = 9
+	signalBitNb = 16
+	testOutBitNb = 16
+	updatePeriodBitNb = 16
+
+Analyzing hierarchy for entity <DAC> in library <work> (architecture <order2>) with generics.
+	signalBitNb = 16
+
+Analyzing hierarchy for entity <interpolatorCalculatePolynom> in library <work> (architecture <RTL>) with generics.
+	coeffBitNb = 19
+	oversamplingBitNb = 8
+	signalBitNb = 16
+
+Analyzing hierarchy for entity <interpolatorCoefficients> in library <work> (architecture <RTL>) with generics.
+	bitNb = 16
+	coeffBitNb = 19
+
+Analyzing hierarchy for entity <interpolatorShiftRegister> in library <work> (architecture <RTL>) with generics.
+	signalBitNb = 16
+
+Analyzing hierarchy for entity <interpolatorTrigger> in library <work> (architecture <RTL>) with generics.
+	counterBitNb = 8
+
+Analyzing hierarchy for entity <offsetToUnsigned> in library <work> (architecture <RTL>) with generics.
+	bitNb = 16
+
+Analyzing hierarchy for entity <periphSpeedController> in library <work> (architecture <RTL>) with generics.
+	updatePeriodBitNb = 16
+
+Analyzing hierarchy for entity <sawtoothGen> in library <work> (architecture <RTL>) with generics.
+	bitNb = 13
+
+Analyzing hierarchy for entity <sinCosTable> in library <work> (architecture <RTL>) with generics.
+	inputBitNb = 13
+	outputBitNb = 16
+	tableAddressBitNb = 3
+
+Analyzing hierarchy for entity <blockRAM> in library <work> (architecture <Spartan3E>) with generics.
+	addressBitNb = 9
+	dataBitNb = 16
+	initFileSpec = "../../Simulation\ramYInit.txt"
+
+Analyzing hierarchy for entity <blockRAM> in library <work> (architecture <Spartan3E>) with generics.
+	addressBitNb = 9
+	dataBitNb = 16
+	initFileSpec = "../../Simulation\ramXInit.txt"
+
+Analyzing hierarchy for entity <blockRAMAddressCounter> in library <work> (architecture <RTL>) with generics.
+	addressBitNb = 9
+
+Analyzing hierarchy for entity <blockRAMControl> in library <work> (architecture <RTL>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <FPGA_textWriter> in library <work> (Architecture <struct>).
+	bitNb = 16
+Entity <FPGA_textWriter> analyzed. Unit <FPGA_textWriter> generated.
+
+Analyzing Entity <DFF> in library <work> (Architecture <sim>).
+Entity <DFF> analyzed. Unit <DFF> generated.
+
+Analyzing Entity <buff> in library <work> (Architecture <sim>).
+Entity <buff> analyzed. Unit <buff> generated.
+
+Analyzing Entity <inverterIn> in library <work> (Architecture <sim>).
+Entity <inverterIn> analyzed. Unit <inverterIn> generated.
+
+Analyzing generic Entity <textWriter> in library <work> (Architecture <struct>).
+	curvePointNb = 423
+	testOutBitNb = 16
+Entity <textWriter> analyzed. Unit <textWriter> generated.
+
+Analyzing generic Entity <beamerPeriphOperator> in library <work> (Architecture <struct>).
+	signalBitNb = 16
+	updatePeriodBitNb = 16
+Entity <beamerPeriphOperator> analyzed. Unit <beamerPeriphOperator> generated.
+
+Analyzing generic Entity <DAC> in library <work> (Architecture <order2>).
+	signalBitNb = 16
+Entity <DAC> analyzed. Unit <DAC> generated.
+
+Analyzing generic Entity <interpolatorCalculatePolynom> in library <work> (Architecture <RTL>).
+	coeffBitNb = 19
+	oversamplingBitNb = 8
+	signalBitNb = 16
+Entity <interpolatorCalculatePolynom> analyzed. Unit <interpolatorCalculatePolynom> generated.
+
+Analyzing generic Entity <interpolatorCoefficients> in library <work> (Architecture <RTL>).
+	bitNb = 16
+	coeffBitNb = 19
+Entity <interpolatorCoefficients> analyzed. Unit <interpolatorCoefficients> generated.
+
+Analyzing generic Entity <interpolatorShiftRegister> in library <work> (Architecture <RTL>).
+	signalBitNb = 16
+Entity <interpolatorShiftRegister> analyzed. Unit <interpolatorShiftRegister> generated.
+
+Analyzing generic Entity <interpolatorTrigger> in library <work> (Architecture <RTL>).
+	counterBitNb = 8
+Entity <interpolatorTrigger> analyzed. Unit <interpolatorTrigger> generated.
+
+Analyzing generic Entity <offsetToUnsigned> in library <work> (Architecture <RTL>).
+	bitNb = 16
+Entity <offsetToUnsigned> analyzed. Unit <offsetToUnsigned> generated.
+
+Analyzing generic Entity <periphSpeedController> in library <work> (Architecture <RTL>).
+	updatePeriodBitNb = 16
+Entity <periphSpeedController> analyzed. Unit <periphSpeedController> generated.
+
+Analyzing generic Entity <sawtoothGen> in library <work> (Architecture <RTL>).
+	bitNb = 13
+Entity <sawtoothGen> analyzed. Unit <sawtoothGen> generated.
+
+Analyzing generic Entity <sinCosTable> in library <work> (Architecture <RTL>).
+	inputBitNb = 13
+	outputBitNb = 16
+	tableAddressBitNb = 3
+Entity <sinCosTable> analyzed. Unit <sinCosTable> generated.
+
+Analyzing generic Entity <beamerPeriphControls> in library <work> (Architecture <struct>).
+	curvePointNb = 423
+	patternAddressBitNb = 9
+	signalBitNb = 16
+	testOutBitNb = 16
+	updatePeriodBitNb = 16
+Entity <beamerPeriphControls> analyzed. Unit <beamerPeriphControls> generated.
+
+Analyzing generic Entity <blockRAM.1> in library <work> (Architecture <Spartan3E>).
+	addressBitNb = 9
+	dataBitNb = 16
+	initFileSpec = "../../Simulation\ramYInit.txt"
+Entity <blockRAM.1> analyzed. Unit <blockRAM.1> generated.
+
+Analyzing generic Entity <blockRAM.2> in library <work> (Architecture <Spartan3E>).
+	addressBitNb = 9
+	dataBitNb = 16
+	initFileSpec = "../../Simulation\ramXInit.txt"
+Entity <blockRAM.2> analyzed. Unit <blockRAM.2> generated.
+
+Analyzing generic Entity <blockRAMAddressCounter> in library <work> (Architecture <RTL>).
+	addressBitNb = 9
+Entity <blockRAMAddressCounter> analyzed. Unit <blockRAMAddressCounter> generated.
+
+Analyzing Entity <blockRAMControl> in library <work> (Architecture <RTL>).
+Entity <blockRAMControl> analyzed. Unit <blockRAMControl> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DFF>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <DFF> synthesized.
+
+
+Synthesizing Unit <buff>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <buff> synthesized.
+
+
+Synthesizing Unit <inverterIn>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <inverterIn> synthesized.
+
+
+Synthesizing Unit <DAC>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+WARNING:Xst:647 - Input <parallelIn<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 20-bit up accumulator for signal <acc1>.
+    Found 20-bit addsub for signal <acc1$mux0001>.
+    Found 21-bit up accumulator for signal <acc2>.
+    Found 21-bit addsub for signal <acc2$mux0001>.
+    Found 21-bit comparator greatequal for signal <quantized$cmp_ge0000> created at line 503.
+    Summary:
+	inferred   2 Accumulator(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <DAC> synthesized.
+
+
+Synthesizing Unit <interpolatorCalculatePolynom>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 16-bit register for signal <sampleOut>.
+    Found 41-bit register for signal <u>.
+    Found 41-bit adder for signal <u$addsub0000> created at line 592.
+    Found 41-bit adder for signal <u$mux0001>.
+    Found 41-bit register for signal <v>.
+    Found 19x19-bit multiplier for signal <v$mult0000> created at line 595.
+    Found 41-bit adder for signal <v$mux0001>.
+    Found 41-bit register for signal <w>.
+    Found 41-bit register for signal <x>.
+    Found 41-bit adder for signal <x$addsub0000> created at line 600.
+    Summary:
+	inferred 180 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <interpolatorCalculatePolynom> synthesized.
+
+
+Synthesizing Unit <interpolatorCoefficients>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 19-bit subtractor for signal <c>.
+    Found 19-bit subtractor for signal <a$addsub0000> created at line 435.
+    Found 19-bit adder for signal <a$addsub0001> created at line 435.
+    Found 19-bit subtractor for signal <a$addsub0002> created at line 435.
+    Found 16x16-bit multiplier for signal <a$mult0000> created at line 435.
+    Found 16x16-bit multiplier for signal <a$mult0002> created at line 435.
+    Found 19-bit subtractor for signal <b$addsub0000> created at line 439.
+    Found 19-bit adder for signal <b$addsub0001> created at line 439.
+    Found 19-bit subtractor for signal <b$addsub0002> created at line 439.
+    Found 16x16-bit multiplier for signal <b$mult0000> created at line 439.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+Unit <interpolatorCoefficients> synthesized.
+
+
+Synthesizing Unit <interpolatorShiftRegister>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 16-bit register for signal <sample1_int>.
+    Found 16-bit register for signal <sample2_int>.
+    Found 16-bit register for signal <sample3_int>.
+    Found 16-bit register for signal <sample4_int>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <interpolatorShiftRegister> synthesized.
+
+
+Synthesizing Unit <interpolatorTrigger>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 8-bit up counter for signal <triggerCounter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <interpolatorTrigger> synthesized.
+
+
+Synthesizing Unit <offsetToUnsigned>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <offsetToUnsigned> synthesized.
+
+
+Synthesizing Unit <periphSpeedController>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 16-bit down counter for signal <enableCounter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <periphSpeedController> synthesized.
+
+
+Synthesizing Unit <sawtoothGen>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 13-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <sawtoothGen> synthesized.
+
+
+Synthesizing Unit <sinCosTable>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+WARNING:Xst:647 - Input <phase<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <changeSignCosine>.
+    Found 16-bit adder for signal <cosine$addsub0000> created at line 694.
+    Found 3-bit adder for signal <phaseTableAddress2$addsub0000> created at line 642.
+    Found 16-bit 8-to-1 multiplexer for signal <quarterCosine>.
+    Found 16-bit 8-to-1 multiplexer for signal <quarterSine>.
+    Found 16-bit adder for signal <sine$addsub0000> created at line 686.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <sinCosTable> synthesized.
+
+
+Synthesizing Unit <blockRAM_1>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 512x16-bit single-port RAM <Mram_memoryArray> for signal <memoryArray>.
+    Found 16-bit register for signal <dataOut>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <blockRAM_1> synthesized.
+
+
+Synthesizing Unit <blockRAM_2>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 512x16-bit single-port RAM <Mram_memoryArray> for signal <memoryArray>.
+    Found 16-bit register for signal <dataOut>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <blockRAM_2> synthesized.
+
+
+Synthesizing Unit <blockRAMAddressCounter>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 9-bit register for signal <addressInt>.
+    Found 9-bit subtractor for signal <addressInt$addsub0000> created at line 204.
+    Found 9-bit adder for signal <addressInt$addsub0001>.
+    Found 9-bit comparator less for signal <addressInt$cmp_lt0000> created at line 204.
+    Found 1-bit xor2 for signal <updateMemChanging$xor0000> created at line 191.
+    Found 1-bit register for signal <updateMemDelayed>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <blockRAMAddressCounter> synthesized.
+
+
+Synthesizing Unit <blockRAMControl>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+    Found 1-bit register for signal <writeDelayed>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <blockRAMControl> synthesized.
+
+
+Synthesizing Unit <beamerPeriphOperator>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <beamerPeriphOperator> synthesized.
+
+
+Synthesizing Unit <beamerPeriphControls>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <beamerPeriphControls> synthesized.
+
+
+Synthesizing Unit <textWriter>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+Unit <textWriter> synthesized.
+
+
+Synthesizing Unit <FPGA_textWriter>.
+    Related source file is "E:/projects/EDA/VHDL/labs/SEm_labs/Board/concat/textWriter.vhd".
+WARNING:Xst:646 - Signal <testOut<2:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <FPGA_textWriter> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 512x16-bit single-port RAM                            : 2
+# Multipliers                                          : 8
+ 16x16-bit multiplier                                  : 6
+ 19x19-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 33
+ 16-bit adder                                          : 2
+ 19-bit adder                                          : 4
+ 19-bit subtractor                                     : 10
+ 20-bit addsub                                         : 2
+ 21-bit addsub                                         : 2
+ 3-bit adder                                           : 1
+ 41-bit adder                                          : 8
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 16-bit down counter                                   : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 4
+ 20-bit up accumulator                                 : 2
+ 21-bit up accumulator                                 : 2
+# Registers                                            : 28
+ 1-bit register                                        : 6
+ 16-bit register                                       : 12
+ 41-bit register                                       : 8
+ 9-bit register                                        : 2
+# Comparators                                          : 4
+ 21-bit comparator greatequal                          : 2
+ 9-bit comparator less                                 : 2
+# Multiplexers                                         : 2
+ 16-bit 8-to-1 multiplexer                             : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <w_37> in Unit <I_polyx> is equivalent to the following 3 FFs/Latches, which will be removed : <w_38> <w_39> <w_40> 
+INFO:Xst:2261 - The FF/Latch <w_37> in Unit <I_polyy> is equivalent to the following 3 FFs/Latches, which will be removed : <w_38> <w_39> <w_40> 
+WARNING:Xst:1710 - FF/Latch <updateMemDelayed> (without init value) has a constant value of 0 in block <I20>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <updateMemDelayed> (without init value) has a constant value of 0 in block <I30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <sampleOut_0> of sequential type is unconnected in block <I_polyx>.
+WARNING:Xst:2677 - Node <sampleOut_0> of sequential type is unconnected in block <I_polyy>.
+
+Synthesizing (advanced) Unit <blockRAM_1>.
+INFO:Xst:3226 - The RAM <Mram_memoryArray> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataOut>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     enA            | connected to signal <en>            | high     |
+    |     weA            | connected to signal <write>         | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <dataOut>       |          |
+    |     dorstA         | connected to signal <write>         | high     |
+    | reset value        | 0000000000000000                               |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <blockRAM_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <blockRAM_2>.
+INFO:Xst:3226 - The RAM <Mram_memoryArray> will be implemented as a BLOCK RAM, absorbing the following register(s): <dataOut>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 16-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     enA            | connected to signal <en>            | high     |
+    |     weA            | connected to signal <write>         | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <dataOut>       |          |
+    |     dorstA         | connected to signal <write>         | high     |
+    | reset value        | 0000000000000000                               |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <blockRAM_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 512x16-bit single-port block RAM                      : 2
+# Multipliers                                          : 8
+ 16x16-bit multiplier                                  : 6
+ 19x19-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 33
+ 16-bit adder                                          : 2
+ 19-bit adder                                          : 4
+ 19-bit subtractor                                     : 10
+ 20-bit addsub                                         : 2
+ 21-bit addsub                                         : 2
+ 3-bit adder                                           : 1
+ 41-bit adder                                          : 8
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 3
+ 13-bit up counter                                     : 1
+ 16-bit down counter                                   : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 4
+ 20-bit up accumulator                                 : 2
+ 21-bit up accumulator                                 : 2
+# Registers                                            : 512
+ Flip-Flops                                            : 512
+# Comparators                                          : 4
+ 21-bit comparator greatequal                          : 2
+ 9-bit comparator less                                 : 2
+# Multiplexers                                         : 2
+ 16-bit 8-to-1 multiplexer                             : 2
+# Xors                                                 : 3
+ 1-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <beamerPeriphControls>: instances <I19>, <I31> of unit <blockRAMControl> are equivalent, second instance is removed
+INFO:Xst:2261 - The FF/Latch <w_37> in Unit <interpolatorCalculatePolynom> is equivalent to the following 3 FFs/Latches, which will be removed : <w_38> <w_39> <w_40> 
+INFO:Xst:2261 - The FF/Latch <I2/I0/I30/updateMemDelayed> in Unit <FPGA_textWriter> is equivalent to the following 2 FFs/Latches, which will be removed : <I2/I0/I20/updateMemDelayed> <I2/I0/I19/writeDelayed> 
+WARNING:Xst:1710 - FF/Latch <I2/I0/I30/updateMemDelayed> (without init value) has a constant value of 0 in block <FPGA_textWriter>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2146 - In block <beamerPeriphOperator>, Counter <I_phase/counter> <I_trig/triggerCounter> are equivalent, XST will keep only <I_phase/counter>.
+INFO:Xst:2261 - The FF/Latch <w_22> in Unit <interpolatorCalculatePolynom> is equivalent to the following 15 FFs/Latches, which will be removed : <w_23> <w_24> <w_25> <w_26> <w_27> <w_28> <w_29> <w_30> <w_31> <w_32> <w_33> <w_34> <w_35> <w_36> <w_37> 
+
+Optimizing unit <FPGA_textWriter> ...
+
+Optimizing unit <interpolatorCalculatePolynom> ...
+
+Optimizing unit <interpolatorCoefficients> ...
+
+Optimizing unit <interpolatorShiftRegister> ...
+
+Optimizing unit <sinCosTable> ...
+
+Optimizing unit <beamerPeriphOperator> ...
+WARNING:Xst:2677 - Node <I2/I1/I_polyx/sampleOut_0> of sequential type is unconnected in block <FPGA_textWriter>.
+WARNING:Xst:2677 - Node <I2/I1/I_polyy/sampleOut_0> of sequential type is unconnected in block <FPGA_textWriter>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FPGA_textWriter, actual ratio is 16.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 581
+ Flip-Flops                                            : 581
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\textWriter.ngr
+Top Level Output File Name         : E:\projects\EDA\VHDL\labs\SEm_labs\Simulation\2016\..\..\Board\ise\textWriter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 6
+
+Cell Usage :
+# BELS                             : 2855
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 29
+#      LUT2                        : 592
+#      LUT3                        : 287
+#      LUT4                        : 269
+#      MULT_AND                    : 50
+#      MUXCY                       : 761
+#      MUXF5                       : 40
+#      VCC                         : 1
+#      XORCY                       : 799
+# FlipFlops/Latches                : 581
+#      FDC                         : 100
+#      FDCE                        : 481
+# RAMS                             : 2
+#      RAMB16_S18                  : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 2
+#      OBUF                        : 3
+# MULTs                            : 10
+#      MULT18X18SIO                : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      656  out of   4656    14%  
+ Number of Slice Flip Flops:            581  out of   9312     6%  
+ Number of 4 input LUTs:               1203  out of   9312    12%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    232     2%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of MULT18X18SIOs:                10  out of     20    50%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 583   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------+-----------------------------+-------+
+Control Signal                      | Buffer(FF name)             | Load  |
+------------------------------------+-----------------------------+-------+
+I0/out11_INV_0_1(I0/out11_INV_0_1:O)| NONE(I2/I1/I_polyy/u_1)     | 290   |
+resetSynch(I0/out11_INV_0:O)        | NONE(I2/I0/I20/addressInt_0)| 290   |
+reset(I1/out11_INV_0:O)             | NONE(I6/Q)                  | 1     |
+------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 22.538ns (Maximum Frequency: 44.370MHz)
+   Minimum input arrival time before clock: 2.700ns
+   Maximum output required time after clock: 6.579ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 22.538ns (frequency: 44.370MHz)
+  Total number of paths / destination ports: 1344177705 / 1078
+-------------------------------------------------------------------------
+Delay:               22.538ns (Levels of Logic = 41)
+  Source:            I2/I1/I_srx/sample3_int_10 (FF)
+  Destination:       I2/I1/I_polyx/v_40 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: I2/I1/I_srx/sample3_int_10 to I2/I1/I_polyx/v_40
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.499  I2/I1/I_srx/sample3_int_10 (I2/I1/I_srx/sample3_int_10)
+     MULT18X18SIO:A10->P10    1   4.091   0.426  I2/I1/I_coeffx/Mmult_a_mult0000 (I2/I1/I_coeffx/a_mult0000<10>)
+     LUT2:I1->O            1   0.612   0.000  I2/I1/I_coeffx/Msub_a_addsub0000_lut<10> (I2/I1/I_coeffx/Msub_a_addsub0000_lut<10>)
+     MUXCY:S->O            1   0.404   0.000  I2/I1/I_coeffx/Msub_a_addsub0000_cy<10> (I2/I1/I_coeffx/Msub_a_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  I2/I1/I_coeffx/Msub_a_addsub0000_cy<11> (I2/I1/I_coeffx/Msub_a_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  I2/I1/I_coeffx/Msub_a_addsub0000_cy<12> (I2/I1/I_coeffx/Msub_a_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  I2/I1/I_coeffx/Msub_a_addsub0000_cy<13> (I2/I1/I_coeffx/Msub_a_addsub0000_cy<13>)
+     XORCY:CI->O           1   0.699   0.426  I2/I1/I_coeffx/Msub_a_addsub0000_xor<14> (I2/I1/I_coeffx/a_addsub0000<14>)
+     LUT2:I1->O            1   0.612   0.000  I2/I1/I_coeffx/Madd_a_addsub0001_lut<14> (I2/I1/I_coeffx/Madd_a_addsub0001_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  I2/I1/I_coeffx/Madd_a_addsub0001_cy<14> (I2/I1/I_coeffx/Madd_a_addsub0001_cy<14>)
+     XORCY:CI->O           1   0.699   0.426  I2/I1/I_coeffx/Madd_a_addsub0001_xor<15> (I2/I1/I_coeffx/a_addsub0001<15>)
+     LUT2:I1->O            1   0.612   0.000  I2/I1/I_coeffx/Msub_a_addsub0002_lut<15> (I2/I1/I_coeffx/Msub_a_addsub0002_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  I2/I1/I_coeffx/Msub_a_addsub0002_cy<15> (I2/I1/I_coeffx/Msub_a_addsub0002_cy<15>)
+     XORCY:CI->O           2   0.699   0.380  I2/I1/I_coeffx/Msub_a_addsub0002_xor<16> (I2/I1/aX<16>)
+     MULT18X18SIO:A16->P17    1   4.331   0.426  I2/I1/I_polyx/Mmult_v_mult0000 (I2/I1/I_polyx/Mmult_v_mult0000_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.612   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_lut<17> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<17> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<18> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<19> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<20> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<20>)
+     MUXCY:CI->O           0   0.051   0.000  I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<21> (I2/I1/I_polyx/Mmult_v_mult00000_Madd_cy<21>)
+     XORCY:CI->O          20   0.699   0.940  I2/I1/I_polyx/Mmult_v_mult00000_Madd_xor<22> (I2/I1/I_polyx/v_mult0000<22>)
+     LUT4:I3->O            1   0.612   0.000  I2/I1/I_polyx/Madd_v_mux0001_lut<22> (I2/I1/I_polyx/Madd_v_mux0001_lut<22>)
+     MUXCY:S->O            1   0.404   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<22> (I2/I1/I_polyx/Madd_v_mux0001_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<23> (I2/I1/I_polyx/Madd_v_mux0001_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<24> (I2/I1/I_polyx/Madd_v_mux0001_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<25> (I2/I1/I_polyx/Madd_v_mux0001_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<26> (I2/I1/I_polyx/Madd_v_mux0001_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<27> (I2/I1/I_polyx/Madd_v_mux0001_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<28> (I2/I1/I_polyx/Madd_v_mux0001_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<29> (I2/I1/I_polyx/Madd_v_mux0001_cy<29>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<30> (I2/I1/I_polyx/Madd_v_mux0001_cy<30>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<31> (I2/I1/I_polyx/Madd_v_mux0001_cy<31>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<32> (I2/I1/I_polyx/Madd_v_mux0001_cy<32>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<33> (I2/I1/I_polyx/Madd_v_mux0001_cy<33>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<34> (I2/I1/I_polyx/Madd_v_mux0001_cy<34>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<35> (I2/I1/I_polyx/Madd_v_mux0001_cy<35>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<36> (I2/I1/I_polyx/Madd_v_mux0001_cy<36>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<37> (I2/I1/I_polyx/Madd_v_mux0001_cy<37>)
+     MUXCY:CI->O           1   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<38> (I2/I1/I_polyx/Madd_v_mux0001_cy<38>)
+     MUXCY:CI->O           0   0.051   0.000  I2/I1/I_polyx/Madd_v_mux0001_cy<39> (I2/I1/I_polyx/Madd_v_mux0001_cy<39>)
+     XORCY:CI->O           1   0.699   0.000  I2/I1/I_polyx/Madd_v_mux0001_xor<40> (I2/I1/I_polyx/v_mux0001<40>)
+     FDCE:D                    0.268          I2/I1/I_polyx/v_40
+    ----------------------------------------
+    Total                     22.538ns (19.015ns logic, 3.523ns route)
+                                       (84.4% logic, 15.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.700ns (Levels of Logic = 2)
+  Source:            selSinCos_n (PAD)
+  Destination:       I9/Q (FF)
+  Destination Clock: clock rising
+
+  Data Path: selSinCos_n to I9/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  selSinCos_n_IBUF (selSinCos_n_IBUF)
+     INV:I->O              1   0.612   0.357  I7/out11_INV_0 (selSinCos)
+     FDC:D                     0.268          I9/Q
+    ----------------------------------------
+    Total                      2.700ns (1.986ns logic, 0.714ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 11 / 3
+-------------------------------------------------------------------------
+Offset:              6.579ns (Levels of Logic = 4)
+  Source:            I2/I0/I30/addressInt_1 (FF)
+  Destination:       triggerOut (PAD)
+  Source Clock:      clock rising
+
+  Data Path: I2/I0/I30/addressInt_1 to triggerOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  I2/I0/I30/addressInt_1 (I2/I0/I30/addressInt_1)
+     LUT4:I0->O            1   0.612   0.000  I2/I0/testOut_1_cmp_eq0000171 (I2/I0/testOut_1_cmp_eq0000171)
+     MUXF5:I0->O           1   0.278   0.357  I2/I0/testOut_1_cmp_eq000017_f5 (I2/I0/testOut_1_cmp_eq000017)
+     MUXF5:S->O            1   0.641   0.357  I2/I0/testOut_1_cmp_eq000033_f5 (testOut<1>)
+     OBUF:I->O                 3.169          triggerOut_OBUF (triggerOut)
+    ----------------------------------------
+    Total                      6.579ns (5.214ns logic, 1.365ns route)
+                                       (79.3% logic, 20.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.59 secs
+ 
+--> 
+
+Total memory usage is 298556 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+
