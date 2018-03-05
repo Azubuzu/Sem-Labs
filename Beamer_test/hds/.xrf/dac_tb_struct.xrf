@@ -9,109 +9,164 @@ VIEW struct.bd
 NO_GRAPHIC 12
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 0,0 16 2 
+GRAPHIC 0,0 17 2 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 1,0 19 0 
+GRAPHIC 1,0 20 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-NO_GRAPHIC 19
+NO_GRAPHIC 20
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 53,0 22 0 
+GRAPHIC 53,0 24 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 362,0 23 0 
+GRAPHIC 1091,0 25 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 45,0 24 0 
+GRAPHIC 1081,0 26 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 364,0 25 0 
+GRAPHIC 362,0 27 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-NO_GRAPHIC 26
+GRAPHIC 45,0 28 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-NO_GRAPHIC 27
+GRAPHIC 364,0 29 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+NO_GRAPHIC 30
+DESIGN @d@a@c_tb
+VIEW struct.bd
+NO_GRAPHIC 31
 LIBRARY Beamer
 DESIGN @d@a@c
-VIEW order2
-GRAPHIC 839,0 29 0 
+VIEW student@version
+GRAPHIC 839,0 33 0 
 DESIGN @d@a@c
 VIEW symbol.sb
-GRAPHIC 14,0 30 1 
+GRAPHIC 14,0 34 1 
 DESIGN @d@a@c
 VIEW symbol.sb
-GRAPHIC 67,0 34 0 
+GRAPHIC 67,0 38 0 
 DESIGN @d@a@c
 VIEW symbol.sb
-GRAPHIC 57,0 35 0 
+GRAPHIC 57,0 39 0 
 DESIGN @d@a@c
 VIEW symbol.sb
-GRAPHIC 52,0 36 0 
+GRAPHIC 52,0 40 0 
 DESIGN @d@a@c
 VIEW symbol.sb
-GRAPHIC 76,0 37 0 
+GRAPHIC 76,0 41 0 
 LIBRARY Beamer_test
 DESIGN @d@a@c_tester
 VIEW test
-GRAPHIC 421,0 40 0 
+GRAPHIC 421,0 44 0 
 DESIGN @d@a@c_tester
 VIEW interface
-GRAPHIC 14,0 41 1 
+GRAPHIC 14,0 45 1 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 366,0 45 0 
+GRAPHIC 1083,0 49 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 55,0 46 0 
+GRAPHIC 366,0 50 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 63,0 47 0 
+GRAPHIC 55,0 51 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 47,0 48 0 
+GRAPHIC 63,0 52 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 47,0 53 0 
+LIBRARY WaveformGenerator
+DESIGN lowpass
+VIEW student@version
+GRAPHIC 1056,0 56 0 
+DESIGN lowpass
+VIEW symbol.sb
+GRAPHIC 14,0 57 1 
+DESIGN lowpass
+VIEW symbol.sb
+GRAPHIC 57,0 62 0 
+DESIGN lowpass
+VIEW symbol.sb
+GRAPHIC 52,0 63 0 
+DESIGN lowpass
+VIEW symbol.sb
+GRAPHIC 76,0 64 0 
+DESIGN lowpass
+VIEW symbol.sb
+GRAPHIC 83,0 65 0 
 LIBRARY Beamer_test
 DESIGN @d@a@c_tb
 VIEW struct.bd
-NO_GRAPHIC 51
+NO_GRAPHIC 68
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 839,0 54 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 421,0 55 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-NO_GRAPHIC 58
-DESIGN @d@a@c_tb
-VIEW struct.bd
-NO_GRAPHIC 60
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 839,0 62 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 846,0 63 1 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 366,0 67 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 63,0 68 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 55,0 69 0 
-DESIGN @d@a@c_tb
-VIEW struct.bd
-GRAPHIC 47,0 70 0 
+GRAPHIC 839,0 71 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
 GRAPHIC 421,0 72 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-GRAPHIC 428,0 73 1 
+GRAPHIC 1056,0 73 0 
 DESIGN @d@a@c_tb
 VIEW struct.bd
-NO_GRAPHIC 83
+NO_GRAPHIC 76
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1099,0 79 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+NO_GRAPHIC 81
+DESIGN @d@a@c_tb
+VIEW struct.bd
+NO_GRAPHIC 82
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 839,0 84 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 846,0 85 1 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 366,0 89 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 63,0 90 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 55,0 91 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 47,0 92 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 421,0 94 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 428,0 95 1 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1056,0 105 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1063,0 106 1 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1083,0 111 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1073,0 112 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1065,0 113 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+GRAPHIC 1093,0 114 0 
+DESIGN @d@a@c_tb
+VIEW struct.bd
+NO_GRAPHIC 117

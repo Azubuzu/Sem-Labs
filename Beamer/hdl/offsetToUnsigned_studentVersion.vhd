@@ -3,4 +3,3 @@ ARCHITECTURE studentVersion OF offsetToUnsigned IS
 BEGIN
 	unsignedOut <= unsigned(signedIn+offset);
 END ARCHITECTURE studentVersion;
---resize("1",bitNb)
