@@ -5875,20 +5875,10 @@ declHierarchy [
 activeViewpointIdx 0
 )
 (WorkTab
-name "SineInterpolator"
+name "Beamer_test"
 showingHierarchy 0
 openLibs [
-"SineInterpolator"
-]
-declHierarchy [
-]
-activeViewpointIdx 0
-)
-(WorkTab
-name "SineInterpolator_test"
-showingHierarchy 0
-openLibs [
-"SineInterpolator_test"
+"Beamer_test"
 ]
 declHierarchy [
 ]
@@ -5921,7 +5911,7 @@ yPos 0
 width 1296
 height 994
 activeSidePanelTab 2
-activeLibraryTab 2
+activeLibraryTab 1
 sidePanelSize 400
 showUnixHiddenFiles 0
 componentBrowserWidth 300
