@@ -95,6 +95,8 @@ For additional information, exceptions, compatibility issues and updates, visit 
 "2.0"
 "promptForRunSettings"
 "0"
+"runMethod"
+"gui"
 "runnableObject"
 "%(task_ISEBinPath)\\ise.exe"
 "runnableObjectType"

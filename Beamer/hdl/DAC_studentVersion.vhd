@@ -1,64 +1,33 @@
 ARCHITECTURE studentVersion OF DAC IS
-	SIGNAL parallelInSigned : unsigned(parallelIn'length downto 0);
-	SIGNAL add1_out : signed(parallelIn'length downto 0);
-	SIGNAL add2_out : signed(add1_out'length+3 downto 0);
-	SIGNAL d1_out : signed(add1_out'range);
-	SIGNAL d2_out : signed(add2_out'range);
-	constant quarter : signed(parallelIn'range) := ((parallelIn'length-3)=>'1', others=>'0');
-	constant quarter2 : signed(d2_out'range) := ((d2_out'length-3)=>'1', others=>'0');
-	constant c1 : signed(parallelIn'length downto 0) := (parallelIn'length-1=>'1', others=>'0'); --:= ((add1_out'high-1)=>'1', others=>'0');
-	constant c2 : signed(parallelIn'length+4 downto 0) := (parallelIn'length+3=>'1', others=>'0');
+	signal accu1 : signed(parallelIn'high + 5 downto 0);
+	signal accu2 : signed(parallelIn'high + 5 downto 0);
+	
+	signal parallelInResized : signed(parallelIn'high + 5 downto 0);
+	
+	constant two_pow_n : signed(parallelIn'high + 5 downto 0) := shift_left(to_signed(1,parallelIn'length+5),parallelIn'high+1);
+	--((parallelIn'high + 1)=>'1', others=>'0'); -- 2^n
+	constant c1 : signed(parallelIn'high + 5 downto 0) := shift_right(two_pow_n, 1); -- 2^(n-1)
+	constant c2 : signed(parallelIn'high + 5 downto 0) := shift_left(two_pow_n, 3); -- 2^(n+3)
+	
 BEGIN
-
-	unsigned_to_signed: process(parallelIn)
+	bassin: process(reset, clock)
 	begin
-		parallelInSigned <= resize(SHIFt_right(parallelIn,1),parallelInSigned'length);
-	end process unsigned_to_signed;
-	
-	bascule_d1: process(reset, clock)
-	begin
-		if reset= '1' then
-			d1_out <= (others => '0');
+		if reset = '1' then
+			accu1 <= (others => '0');
+			accu2 <= (others => '0');
 		elsif rising_edge(clock) then
-			d1_out <= add1_out;
-		end if;
-	end process bascule_d1;
+			if accu2(accu2'high) = '0' then		-- accu2 >= 0
+				accu1 <= accu1 + parallelInResized - c1;
+				accu2 <= accu2 + accu1 - c2;
+			else 								-- accu2 < 0			
+				accu1 <= accu1 + parallelInResized + c1;
+				accu2 <= accu2 + accu1 + c2;
+			end if;
+		end if; -- reset
+	end process bassin;
 	
-	bascule_d2: process(reset, clock)
-	begin
-		if reset= '1' then
-			d2_out <= (others => '0');
-		elsif rising_edge(clock) then
-			d2_out <= add2_out;
-		end if;
-	end process bascule_d2;
+	parallelInResized <= signed(shift_right(resize(parallelIn, parallelInResized'length), 1)) - shift_right(two_pow_n, 2); -- recenter to zero
 	
-	part1: process(parallelInSigned,d1_out)
-	begin
-		if d2_out(d2_out'high) = '0' then
-			add1_out <= signed(parallelInSigned) + d1_out + quarter - c1;
-		else
-			add1_out <= signed(parallelInSigned) + d1_out + quarter + c1;
-		end if;
-	end process part1;
-	
-	part2: process(d1_out,d2_out)
-	begin
-		if d2_out(d2_out'high) = '0' then
-			add2_out <= d1_out + d2_out - c2;--SHIFT_RIGHT(d1_out,1) + d2_out - c2 + quarter2;
-		else
-			add2_out <= d1_out + d2_out + c2;--SHIFT_RIGHT(d1_out,1) + d2_out + c2 + quarter2;
-		end if;
-	end process part2;
-	
-	msb: process(d2_out)
-	begin
-		if d2_out(d2_out'high) = '0' then
-			serialOut <= '1';
-		else
-			serialOut <= '0';
-		end if;
-	end process msb;
-	--compare_out(compare_out'HIGH);	
+	serialOut <= not(accu2(accu2'high)); -- outside of the process to avoid X state
 	
 END ARCHITECTURE studentVersion;

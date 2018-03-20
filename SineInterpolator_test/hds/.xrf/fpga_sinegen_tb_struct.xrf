@@ -104,7 +104,7 @@ VIEW struct.bd
 GRAPHIC 47,0 61 0 
 LIBRARY WaveformGenerator
 DESIGN lowpass
-VIEW @r@t@l
+VIEW student@version
 GRAPHIC 1334,0 64 0 
 DESIGN lowpass
 VIEW symbol.sb

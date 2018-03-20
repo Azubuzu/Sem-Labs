@@ -46,7 +46,7 @@ settingsMap [
 "GlitchGeneration"
 "1"
 "InitCmd"
-"$SIMULATION_DIR/sineGen.do"
+"C:/Users/leo.dosreis/Documents/GitHub/Sem-Labs/Simulation/FPGA_sineGen.do"
 "LogFile"
 ""
 "RemoteHost"
