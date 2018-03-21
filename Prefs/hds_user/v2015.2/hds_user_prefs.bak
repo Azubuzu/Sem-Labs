@@ -5894,6 +5894,26 @@ declHierarchy [
 ]
 activeViewpointIdx 0
 )
+(WorkTab
+name "AhbLite"
+showingHierarchy 0
+openLibs [
+"AhbLite"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "Beamer_test"
+showingHierarchy 0
+openLibs [
+"Beamer_test"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
 ]
 ViewpointsOnOutlookBar [
 "Requirements"
@@ -5919,9 +5939,8 @@ displayHierarchy 0
 xPos 0
 yPos 0
 width 1296
-height 994
+height 1010
 activeSidePanelTab 2
-activeLibraryTab 1
 sidePanelSize 400
 showUnixHiddenFiles 0
 componentBrowserWidth 300

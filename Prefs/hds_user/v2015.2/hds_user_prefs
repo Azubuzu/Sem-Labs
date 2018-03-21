@@ -1269,6 +1269,7 @@ projectPaths [
 "E:\\projects\\EDA\\VHDL\\labs\\SEm_labs\\Prefs\\sineGen.hdp"
 "U:\\SEm_labs\\SEm_labs\\Prefs\\sineGen.hdp"
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\sineGen.hdp"
+"C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\beamer.hdp"
 ]
 libMappingsRootDir ""
 teamLibMappingsRootDir ""
@@ -5875,20 +5876,10 @@ declHierarchy [
 activeViewpointIdx 0
 )
 (WorkTab
-name "Board"
+name "AhbLiteComponents_test"
 showingHierarchy 0
 openLibs [
-"Board"
-]
-declHierarchy [
-]
-activeViewpointIdx 0
-)
-(WorkTab
-name "SineInterpolator_test"
-showingHierarchy 0
-openLibs [
-"SineInterpolator_test"
+"AhbLiteComponents_test"
 ]
 declHierarchy [
 ]
@@ -5919,7 +5910,7 @@ displayHierarchy 0
 xPos 0
 yPos 0
 width 1296
-height 994
+height 1010
 activeSidePanelTab 2
 activeLibraryTab 1
 sidePanelSize 400
