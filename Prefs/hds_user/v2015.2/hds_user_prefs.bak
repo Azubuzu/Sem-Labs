@@ -5885,16 +5885,6 @@ declHierarchy [
 ]
 activeViewpointIdx 0
 )
-(WorkTab
-name "AhbLite"
-showingHierarchy 0
-openLibs [
-"AhbLite"
-]
-declHierarchy [
-]
-activeViewpointIdx 0
-)
 ]
 ViewpointsOnOutlookBar [
 "Requirements"
