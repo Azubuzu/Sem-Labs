@@ -34,26 +34,21 @@ ARCHITECTURE studentVersion OF ahbUart IS
 	constant writeValAddr: natural := 0;
 	constant writeCtrlAddr: natural := 1;
 	constant writeSpeedAddr: natural := 2;
-	
 	constant readValAddr : natural := 0;
 	constant readStatusAddr : natural := 1;
 	constant statNewRx : natural := 0;
 	constant statTx : natural := 1;
 	constant statRxIncoming : natural := 2;
 	
-	-- Define array of write/read registers
+	----------------------------------
+	--			 AHB
+	----------------------------------
 	type reg_write_type is array (0 to reg_write_number-1) of std_ulogic_vector(hwData'range);
 	type reg_read_type is array (0 to reg_read_number-1) of std_ulogic_vector(hwData'range);
 	
 	signal reg_write : reg_write_type;
 	signal reg_read : reg_read_type;	
-	
-	-- Bit arrays for shift register
---	type bit_array_type is array (0 to 8) of std_ulogic;
-	
-	signal bit_array_tx: unsigned(8 downto 0); --bit_array_type;
-	signal bit_array_rx: unsigned(8 downto 0); --bit_array_type;
-	
+
 	-- Enable signals for register writing
 	type en_write_type is array (0 to reg_write_number-1) of std_ulogic;
 	signal ens_write : en_write_type;
@@ -61,12 +56,24 @@ ARCHITECTURE studentVersion OF ahbUart IS
 	-- Enable signals for register reading
 	type en_read_type is array (0 to reg_read_number-1) of std_ulogic;
 	signal ens_read : en_read_type;
-		
-	signal tx_count : unsigned(hwData'range);
+	
+	----------------------------------
+	--			 TX
+	----------------------------------
+	signal tx_bit_array: unsigned(8 downto 0); 		
+	signal tx_count : unsigned(hwData'range);	-- for the uart speed
 	signal tx_en : std_ulogic := '0';
+	signal tx_start_send : std_ulogic := '0';
 	signal tx_bit_count : unsigned(3 downto 0);
 	
---	signal tx_send : std_ulogic <= '0';
+	----------------------------------
+	--			 RX
+	----------------------------------
+	signal rx_bit_array: unsigned(7 downto 0); 
+	signal rx_count : unsigned(hwData'range);
+	signal rx_en : std_ulogic := '0';
+	signal rx_bit_count : unsigned(3 downto 0);
+
 
 BEGIN
 
@@ -91,10 +98,21 @@ BEGIN
 			--		  TX Shift register
 			-- ----------------------------
 			-- Set all regs to 0 at start	
-			bit_array_tx <= (others=>'0');
+			tx_bit_array <= (others=>'0');
 			TxD <= '1';
 			tx_count <= (others => '0');
 			tx_en <= '0';
+			tx_start_send <= '0';
+			tx_bit_count <= (others => '0');
+			
+			-- ----------------------------
+			--		  RX processing
+			-- ----------------------------
+			-- Set all regs to 0 at start	
+			rx_bit_array <= (others=>'0');
+			rx_count <= (others => '0');
+			rx_en <= '0';
+			rx_bit_count <= (others => '0');
 		
 		elsif rising_edge(hClk) then
 			-- ----------------------------
@@ -116,6 +134,12 @@ BEGIN
 				if ens_read(i) = '1' then 
 					-- If so, write to this register
 					hRData <= reg_read(i);
+					
+					-- If uart rx value has been read, reset flag
+					if i = readValAddr then
+						reg_read(readStatusAddr)(statNewRx) <= '0';
+					end if;
+					
 				end if;
 			end loop;
 			
@@ -137,6 +161,7 @@ BEGIN
 					-- If the microcontroller wishes to write an output
 					if i = writeValAddr then
 						reg_read(readStatusAddr)(statTx) <= '1';
+						tx_start_send <= '1';
 					end if;
 				end if;
 			end loop;
@@ -149,27 +174,89 @@ BEGIN
 				if tx_en = '1' then
 					-- Just an impulse
 					tx_en <= '0';
-					-- Send bit to line
-					TxD <= bit_array_tx(0);
-					bit_array_tx <= shift_right(bit_array_tx, 1);
+					-- Count that only 8 bits are sent
+					tx_bit_count <= tx_bit_count+1;
+					
+					-- Start bit + 8 bits
+					if tx_bit_count = 9 then
+						tx_bit_count <= (others=>'0');
+						reg_read(readStatusAddr)(statTx) <= '0';
+						TxD <= '1';
+					else
+						-- Send bit to line
+						TxD <= tx_bit_array(0);
+						tx_bit_array <= shift_right(tx_bit_array, 1);
+					end if;
 				end if;		
-			else------------------------------------------------------------------------- the error is here
+			end if;
+			
+			-- Allows start of transmission
+			if tx_start_send = '1' then
+				tx_start_send <= '0';
 				-- Store write value bits
-				bit_array_tx(8 downto 1) <= unsigned(reg_write(writeValAddr)(7 downto 0));
-				bit_array_tx(0) <= '0';	-- start bit
+				tx_bit_array(8 downto 1) <= unsigned(reg_write(writeValAddr)(7 downto 0));
+				tx_bit_array(0) <= '0';	-- start bit
 			end if;
 			
 			-- Tx speed counter
 			if reg_read(readStatusAddr)(statTx) = '1' then
-				-- Every time counter overflows speed is defined
-				if tx_count = unsigned(reg_write(writeSpeedAddr)) then
+				-- Every time counter overflows, reset count value
+				if tx_count = unsigned(reg_write(writeSpeedAddr))-1 then
 					tx_count <= (others => '0');
 					tx_en <= '1';
 				else
 					tx_count <= tx_count + 1;
 				end if;
+			-- reset counter when not sending
+			else 
+				tx_count <= (others => '0');
 			end if;
 			
+			-- ----------------------------
+			--		  Rx processing
+			-- ----------------------------
+			-- If receiveing is taking place
+			if reg_read(readStatusAddr)(statRxIncoming) = '1' then		
+				if rx_en = '1' then
+					-- Just an impulse
+					rx_en <= '0';
+					-- Count that only 8 bits are sent
+					rx_bit_count <= rx_bit_count+1;
+										
+					-- Start bit + 8 bits
+					if rx_bit_count = 8 then
+						rx_bit_count <= (others=>'0');
+						reg_read(readStatusAddr)(statRxIncoming) <= '0';
+						reg_read(readStatusAddr)(statNewRx) <= '1';	-- value is ready to be read
+						reg_read(readValAddr)(7 downto 0) <= std_ulogic_vector(rx_bit_array);
+						reg_read(readValAddr)(reg_read(readValAddr)'high downto 8) <= (others => '0');
+						TxD <= '1';						
+					else 
+						-- Send line to registers
+						rx_bit_array(7) <= RxD;
+						rx_bit_array(6 downto 0) <= resize(shift_right(rx_bit_array, 1), rx_bit_array'length-1);
+					end if;
+				end if;		
+			end if;
+
+			-- Detect start bit and allow recpetion
+			if reg_read(readStatusAddr)(statRxIncoming) = '0' and RxD = '0' then
+				reg_read(readStatusAddr)(statRxIncoming) <= '1';
+			end if;
+			
+			-- Rx speed counter
+			if reg_read(readStatusAddr)(statRxIncoming) = '1' then
+				-- Every time counter overflows, reset count value
+				if rx_count = unsigned(reg_write(writeSpeedAddr))-1 then
+					rx_count <= (others => '0');
+					rx_en <= '1';
+				else
+					rx_count <= rx_count + 1;
+				end if;
+			else	
+				rx_count <= (others=>'0');
+			
+			end if;
 		end if;
 	end process d_ff;
 	
