@@ -45,7 +45,7 @@ VIEW struct.bd
 NO_GRAPHIC 31
 LIBRARY pipelinedOperators
 DESIGN pipeline@adder
-VIEW @r@t@l
+VIEW student@version
 GRAPHIC 2359,0 33 0 
 DESIGN pipeline@adder
 VIEW symbol.sb

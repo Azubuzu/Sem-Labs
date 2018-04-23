@@ -1270,6 +1270,7 @@ projectPaths [
 "U:\\SEm_labs\\SEm_labs\\Prefs\\sineGen.hdp"
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\sineGen.hdp"
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\beamer.hdp"
+"C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\pipelinedOperators.hdp"
 ]
 libMappingsRootDir ""
 teamLibMappingsRootDir ""
@@ -3621,7 +3622,7 @@ hdsWorkspaceLocation ""
 relativeLibraryRootDir ""
 vmLabelLatestDontAskAgain 0
 vmLabelWorkspaceDontAskAgain 0
-logWindowGeometry "1092x986+1367+0"
+logWindowGeometry "1092x966+1347+162"
 diagramBrowserTabNo 0
 showInsertPortHint 0
 showContentFirstTime 0
@@ -5879,7 +5880,6 @@ activeViewpointIdx 0
 name "AhbLiteComponents_test"
 showingHierarchy 0
 openLibs [
-"AhbLiteComponents_test"
 ]
 declHierarchy [
 ]
@@ -5889,7 +5889,6 @@ activeViewpointIdx 0
 name "AhbLite"
 showingHierarchy 0
 openLibs [
-"AhbLite"
 ]
 declHierarchy [
 ]
@@ -5899,7 +5898,6 @@ activeViewpointIdx 0
 name "Beamer_test"
 showingHierarchy 0
 openLibs [
-"Beamer_test"
 ]
 declHierarchy [
 ]
@@ -5909,7 +5907,26 @@ activeViewpointIdx 0
 name "Beamer"
 showingHierarchy 0
 openLibs [
-"Beamer"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "pipelinedOperators"
+showingHierarchy 0
+openLibs [
+"pipelinedOperators"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "pipelinedOperators_test"
+showingHierarchy 0
+openLibs [
+"pipelinedOperators_test"
 ]
 declHierarchy [
 ]
@@ -5942,7 +5959,7 @@ yPos 0
 width 1280
 height 994
 activeSidePanelTab 2
-activeLibraryTab 3
+activeLibraryTab 2
 sidePanelSize 400
 showUnixHiddenFiles 0
 componentBrowserWidth 300

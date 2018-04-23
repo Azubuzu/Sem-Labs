@@ -1,2 +1,2 @@
-DEFAULT_FILE atom parallelAdder_RTL.vhd
-DEFAULT_ARCHITECTURE atom RTL
+DEFAULT_FILE atom parallelAdder_studentVersion.vhd
+DEFAULT_ARCHITECTURE atom studentVersion

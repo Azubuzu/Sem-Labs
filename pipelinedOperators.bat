@@ -52,10 +52,10 @@ if not exist !HELS! (
   set HELS=%BASE_DIR%\..\..\libs\scripts\HELS.bat
   if not exist !HELS! (
     :: check on server, as used for ET labs
-    set HELS=R:\Modules\ET\8213_Ele2\ELN\Labs\Libraries\scripts\HELS.bat
+    set HELS=R:\ETE\ElN_8215\\ELN\Labs\Libraries\scripts\HELS.bat
     if not exist !HELS! (
       :: check on server, as used for SI labs
-      set HELS=R:\Modules\SI\2131_ELE\ELN\Labs\Libraries\scripts\HELS.bat
+      set HELS=R:\SYND\Ele_2131\ELN\Labs\Libraries\scripts\HELS.bat
       if not exist !HELS! (
         echo ERROR: No valid HELS found: please verify your project setup.
         pause
