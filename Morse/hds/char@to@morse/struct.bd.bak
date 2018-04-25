@@ -1,7 +1,6 @@
 DocumentHdrVersion "1.1"
 Header (DocumentHdr
 version 2
-dialect 10
 dmPackageRefs [
 (DmPackageRef
 library "ieee"
@@ -168,7 +167,7 @@ value "WE5400"
 )
 (vvPair
 variable "graphical_source_time"
-value "11:18:34"
+value "11:17:34"
 )
 (vvPair
 variable "group"
@@ -260,7 +259,7 @@ value "struct"
 )
 (vvPair
 variable "time"
-value "11:18:34"
+value "11:17:34"
 )
 (vvPair
 variable "unit"
@@ -288,7 +287,7 @@ value "18"
 )
 ]
 )
-LanguageMgr "Vhdl2002LangMgr"
+LanguageMgr "VhdlLangMgr"
 uid 134,0
 optionalChildren [
 *1 (PortIoOut
@@ -627,7 +626,7 @@ va (VaSet
 fg "0,0,32768"
 bg "0,0,32768"
 )
-xt "53200,65000,64200,66000"
+xt "53200,65000,63200,66000"
 st "
 by %user on %dd %month %year
 "
@@ -781,7 +780,7 @@ va (VaSet
 fg "0,0,32768"
 bg "0,0,32768"
 )
-xt "74200,61000,76700,62000"
+xt "74200,61000,78200,62000"
 st "
 %project_name
 "
@@ -2158,7 +2157,7 @@ exportStdPackageRefs 1
 )
 hasePageBreakOrigin 1
 pageBreakOrigin "-7000,0"
-lastUid 532,0
+lastUid 505,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

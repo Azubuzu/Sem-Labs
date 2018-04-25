@@ -1,7 +1,6 @@
 DocumentHdrVersion "1.1"
 Header (DocumentHdr
 version 2
-dialect 10
 dmPackageRefs [
 (DmPackageRef
 library "ieee"
@@ -27,30 +26,30 @@ libraryRefs [
 "ieee"
 ]
 )
-version "26.1"
-appVersion "2015.2 (Build 5)"
+version "23.1"
+appVersion "2009.2 (Build 10)"
 model (StateMachine
 VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hdl"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hdl"
 )
 (vvPair
 variable "HDSDir"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm.info"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm.user"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm.user"
 )
 (vvPair
 variable "SourceDir"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds"
 )
 (vvPair
 variable "appl"
@@ -74,27 +73,27 @@ value "%(unit)_%(view)_config"
 )
 (vvPair
 variable "d"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller"
 )
 (vvPair
 variable "d_logical"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\charToMorseController"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\charToMorseController"
 )
 (vvPair
 variable "date"
-value "25.04.2018"
+value "20.04.2017"
 )
 (vvPair
 variable "day"
-value "mer."
+value "jeu."
 )
 (vvPair
 variable "day_long"
-value "mercredi"
+value "jeudi"
 )
 (vvPair
 variable "dd"
-value "25"
+value "20"
 )
 (vvPair
 variable "designName"
@@ -121,32 +120,12 @@ variable "f_noext"
 value "fsm"
 )
 (vvPair
-variable "graphical_source_author"
-value "leo.dosreis"
-)
-(vvPair
-variable "graphical_source_date"
-value "25.04.2018"
-)
-(vvPair
-variable "graphical_source_group"
-value "UNKNOWN"
-)
-(vvPair
-variable "graphical_source_host"
-value "WE5400"
-)
-(vvPair
-variable "graphical_source_time"
-value "11:18:52"
-)
-(vvPair
 variable "group"
 value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "WE5400"
+value "WE3673"
 )
 (vvPair
 variable "language"
@@ -178,11 +157,11 @@ value "avril"
 )
 (vvPair
 variable "p"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\char@to@morse@controller\\fsm.sm"
 )
 (vvPair
 variable "p_logical"
-value "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\..\\Morse\\hds\\charToMorseController\\fsm.sm"
+value "D:\\Labs\\SEm_labs\\Prefs\\..\\Morse\\hds\\charToMorseController\\fsm.sm"
 )
 (vvPair
 variable "package_name"
@@ -190,7 +169,7 @@ value "<Undefined Variable>"
 )
 (vvPair
 variable "project_name"
-value "morse"
+value "hds-morse"
 )
 (vvPair
 variable "series"
@@ -198,7 +177,7 @@ value "HDL Designer Series"
 )
 (vvPair
 variable "task_AsmPath"
-value "$HEI_LIBS_DIR\\NanoBlaze\\hdl"
+value "$HDS_LIBS_DIR\\NanoBlaze\\hdl"
 )
 (vvPair
 variable "task_HDSPath"
@@ -214,7 +193,7 @@ value "$ISE_SCRATCH_WORK_DIR"
 )
 (vvPair
 variable "task_ModelSimPath"
-value "$MODELSIM_HOME"
+value "$MODELSIM_HOME\\win32"
 )
 (vvPair
 variable "this_ext"
@@ -230,7 +209,7 @@ value "fsm"
 )
 (vvPair
 variable "time"
-value "11:18:52"
+value "16:30:54"
 )
 (vvPair
 variable "unit"
@@ -238,11 +217,11 @@ value "charToMorseController"
 )
 (vvPair
 variable "user"
-value "leo.dosreis"
+value "francois"
 )
 (vvPair
 variable "version"
-value "2015.2 (Build 5)"
+value "2009.2 (Build 10)"
 )
 (vvPair
 variable "view"
@@ -250,11 +229,11 @@ value "fsm"
 )
 (vvPair
 variable "year"
-value "2018"
+value "2017"
 )
 (vvPair
 variable "yy"
-value "18"
+value "17"
 )
 ]
 )
@@ -6918,34 +6897,6 @@ visibleHeight 4600
 visibleWidth 14600
 )
 )
-defaultRequirementText (RequirementText
-shape (ZoomableIcon
-layer 0
-va (VaSet
-vasetType 1
-fg "59904,39936,65280"
-lineColor "0,0,32768"
-)
-xt "0,0,1500,1750"
-iconName "reqTracerRequirement.bmp"
-iconMaskName "reqTracerRequirement.msk"
-)
-autoResize 1
-text (MLText
-va (VaSet
-fg "0,0,32768"
-font "arial,8,0"
-)
-xt "500,2150,1400,3150"
-st "
-Text
-"
-tm "RequirementText"
-wrapOption 3
-visibleHeight 1350
-visibleWidth 1100
-)
-)
 defaultPanel (Panel
 shape (RectFrame
 va (VaSet
@@ -6969,31 +6920,7 @@ tm "PanelText"
 )
 )
 )
-localPreDecl *80 (SmLocalDecl
-uid 901,0
-stg "VerticalLayoutStrategy"
-first (Text
-uid 902,0
-va (VaSet
-isHidden 1
-font "Arial,8,1"
-)
-xt "0,0,10500,1000"
-st "Architecture Declarations"
-blo "0,800"
-)
-second (MLText
-uid 903,0
-va (VaSet
-isHidden 1
-font "Courier New,8,0"
-)
-xt "0,1000,0,1000"
-tm "LocalDeclTextMgr"
-)
-declType 1
-)
-localDecl *81 (SmLocalDecl
+localDecl *80 (SmLocalDecl
 uid 3,0
 stg "VerticalLayoutStrategy"
 first (Text
@@ -7013,37 +6940,12 @@ font "Courier New,8,0"
 xt "22100,0,22100,0"
 tm "LocalDeclTextMgr"
 )
-declType 2
 )
-localPostDecl *82 (SmLocalDecl
-uid 904,0
-stg "VerticalLayoutStrategy"
-first (Text
-uid 905,0
-va (VaSet
-isHidden 1
-font "Arial,8,1"
-)
-xt "0,0,10500,1000"
-st "Architecture Declarations"
-blo "0,800"
-)
-second (MLText
-uid 906,0
-va (VaSet
-isHidden 1
-font "Courier New,8,0"
-)
-xt "0,1000,0,1000"
-tm "LocalDeclTextMgr"
-)
-declType 3
-)
-processDecl *83 (SmProcessDecl
+processDecl *81 (SmProcessDecl
 uid 6,0
 stg "VerticalLayoutStrategy"
 textVec [
-*84 (Text
+*82 (Text
 uid 7,0
 va (VaSet
 font "Arial,8,1"
@@ -7052,7 +6954,7 @@ xt "69000,-1000,77900,0"
 st "Process Declarations"
 blo "69000,-200"
 )
-*85 (Text
+*83 (Text
 uid 8,0
 va (VaSet
 font "Arial,8,1"
@@ -7061,7 +6963,7 @@ xt "69000,0,76200,1000"
 st "Clocked Process:"
 blo "69000,800"
 )
-*86 (MLText
+*84 (MLText
 uid 9,0
 va (VaSet
 font "Courier New,8,0"
@@ -7069,7 +6971,7 @@ font "Courier New,8,0"
 xt "69000,-1000,69000,-1000"
 tm "ProcessDeclTextMgr"
 )
-*87 (Text
+*85 (Text
 uid 10,0
 va (VaSet
 font "Arial,8,1"
@@ -7078,7 +6980,7 @@ xt "69000,1000,75900,2000"
 st "Output Process:"
 blo "69000,1800"
 )
-*88 (MLText
+*86 (MLText
 uid 11,0
 va (VaSet
 font "Courier New,8,0"
@@ -7089,11 +6991,11 @@ tm "ProcessDeclTextMgr"
 ]
 associable 1
 )
-defaultActions *89 (MlTextGroup
+defaultActions *87 (MlTextGroup
 uid 12,0
 stg "VerticalLayoutStrategy"
 textVec [
-*90 (Text
+*88 (Text
 uid 13,0
 va (VaSet
 font "Arial,8,1"
@@ -7102,7 +7004,7 @@ xt "0,-1000,6200,0"
 st "Global Actions"
 blo "0,-200"
 )
-*91 (Text
+*89 (Text
 uid 14,0
 va (VaSet
 font "Arial,8,1"
@@ -7111,14 +7013,14 @@ xt "0,0,5300,1000"
 st "Pre Actions:"
 blo "0,800"
 )
-*92 (MLText
+*90 (MLText
 uid 15,0
 va (VaSet
 )
 xt "0,-1000,0,-1000"
 tm "Actions"
 )
-*93 (Text
+*91 (Text
 uid 16,0
 va (VaSet
 font "Arial,8,1"
@@ -7127,7 +7029,7 @@ xt "0,1000,5800,2000"
 st "Post Actions:"
 blo "0,1800"
 )
-*94 (MLText
+*92 (MLText
 uid 17,0
 va (VaSet
 )
@@ -7137,7 +7039,7 @@ tm "Actions"
 ]
 associable 1
 )
-archConcurrentStatementBlock *95 (BiTextGroup
+archConcurrentStatementBlock *93 (BiTextGroup
 uid 18,0
 stg "VerticalLayoutStrategy"
 first (Text
@@ -7158,7 +7060,7 @@ tm "ArchConcStmtTextMgr"
 )
 associable 1
 )
-signalsGenStatus *96 (SmSignalGenStatus
+signalsGenStatus *94 (SmSignalGenStatus
 uid 24,0
 stg "VerticalLayoutStrategy"
 first (Text
@@ -7184,7 +7086,7 @@ unitNb        OUT     (others => '0')         COMB
 tm "SmSignalsGenStatusTextMgr"
 )
 )
-stateRegBlock *97 (BiTextGroup
+stateRegBlock *95 (BiTextGroup
 uid 21,0
 stg "VerticalLayoutStrategy"
 first (Text
@@ -7293,66 +7195,66 @@ stateOrder [
 name "csm"
 )
 ]
-lastUid 906,0
+lastUid 871,0
 commonDM (CommonDM
 ldm (LogicalDM
 ordering 1
-emptyRow *98 (LEmptyRow
+emptyRow *96 (LEmptyRow
 )
 uid 239,0
 optionalChildren [
-*99 (RefLabelRowHdr
+*97 (RefLabelRowHdr
 )
-*100 (TitleRowHdr
+*98 (TitleRowHdr
 )
-*101 (FilterRowHdr
+*99 (FilterRowHdr
 )
-*102 (RefLabelColHdr
+*100 (RefLabelColHdr
 tm "RefLabelColHdrMgr"
 )
-*103 (RowExpandColHdr
+*101 (RowExpandColHdr
 tm "RowExpandColHdrMgr"
 )
-*104 (GroupColHdr
+*102 (GroupColHdr
 tm "GroupColHdrMgr"
 )
-*105 (NameColHdr
+*103 (NameColHdr
 tm "SmNameColHdrMgr"
 )
-*106 (ModeColHdr
+*104 (ModeColHdr
 tm "SmModeColHdrMgr"
 )
-*107 (TypeColHdr
+*105 (TypeColHdr
 tm "SmTypeColHdrMgr"
 )
-*108 (BoundsColHdr
+*106 (BoundsColHdr
 tm "SmBoundsColHdrMgr"
 )
-*109 (InitColHdr
+*107 (InitColHdr
 tm "SmInitColHdrMgr"
 )
-*110 (ColumnHdr
+*108 (ColumnHdr
 tm "SmCategoryColHdrMgr"
 )
-*111 (ColumnHdr
+*109 (ColumnHdr
 tm "SmAssignColHdrMgr"
 )
-*112 (ColumnHdr
+*110 (ColumnHdr
 tm "SmExprColHdrMgr"
 )
-*113 (ColumnHdr
+*111 (ColumnHdr
 tm "SmSchemeColHdrMgr"
 )
-*114 (ColumnHdr
+*112 (ColumnHdr
 tm "SmDefValColHdrMgr"
 )
-*115 (ColumnHdr
+*113 (ColumnHdr
 tm "SmRstValColHdrMgr"
 )
-*116 (EolColHdr
+*114 (EolColHdr
 tm "SmEolColHdrMgr"
 )
-*117 (LeafLogPort
+*115 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -7365,7 +7267,7 @@ uid 152,0
 scheme 0
 defVal "'0'"
 )
-*118 (LeafLogPort
+*116 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "clock"
@@ -7377,7 +7279,7 @@ uid 154,0
 cat 1
 expr "clock'EVENT AND clock = '1'"
 )
-*119 (LeafLogPort
+*117 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "reset"
@@ -7389,7 +7291,7 @@ uid 156,0
 cat 9
 expr "reset = '1'"
 )
-*120 (LeafLogPort
+*118 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "charValid"
@@ -7399,7 +7301,7 @@ o 4
 )
 uid 158,0
 )
-*121 (LeafLogPort
+*119 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "char"
@@ -7411,7 +7313,7 @@ o 5
 uid 229,0
 ass ""
 )
-*122 (LeafLogPort
+*120 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -7424,7 +7326,7 @@ uid 231,0
 scheme 0
 defVal "'0'"
 )
-*123 (LeafLogPort
+*121 (LeafLogPort
 port (LogicalPort
 m 1
 decl (Decl
@@ -7438,7 +7340,7 @@ uid 233,0
 scheme 0
 defVal "(others => '0')"
 )
-*124 (LeafLogPort
+*122 (LeafLogPort
 port (LogicalPort
 decl (Decl
 n "counterDone"
@@ -7456,7 +7358,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 258,0
 optionalChildren [
-*125 (Sheet
+*123 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -7473,76 +7375,76 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *126 (MRCItem
-litem &98
+emptyMRCItem *124 (MRCItem
+litem &96
 pos 8
 dimension 20
 )
 uid 260,0
 optionalChildren [
-*127 (MRCItem
-litem &99
+*125 (MRCItem
+litem &97
 pos 0
 dimension 20
 uid 261,0
 )
-*128 (MRCItem
-litem &100
+*126 (MRCItem
+litem &98
 pos 1
 dimension 23
 uid 262,0
 )
-*129 (MRCItem
-litem &101
+*127 (MRCItem
+litem &99
 pos 2
 hidden 1
 dimension 20
 uid 263,0
 )
-*130 (MRCItem
-litem &117
+*128 (MRCItem
+litem &115
 pos 0
 dimension 20
 uid 153,0
 )
-*131 (MRCItem
-litem &118
+*129 (MRCItem
+litem &116
 pos 1
 dimension 20
 uid 155,0
 )
-*132 (MRCItem
-litem &119
+*130 (MRCItem
+litem &117
 pos 2
 dimension 20
 uid 157,0
 )
-*133 (MRCItem
-litem &120
+*131 (MRCItem
+litem &118
 pos 3
 dimension 20
 uid 159,0
 )
-*134 (MRCItem
-litem &121
+*132 (MRCItem
+litem &119
 pos 4
 dimension 20
 uid 228,0
 )
-*135 (MRCItem
-litem &122
+*133 (MRCItem
+litem &120
 pos 5
 dimension 20
 uid 230,0
 )
-*136 (MRCItem
-litem &123
+*134 (MRCItem
+litem &121
 pos 6
 dimension 20
 uid 232,0
 )
-*137 (MRCItem
-litem &124
+*135 (MRCItem
+litem &122
 pos 7
 dimension 20
 uid 362,0
@@ -7558,86 +7460,86 @@ textAngle 90
 )
 uid 264,0
 optionalChildren [
-*138 (MRCItem
-litem &102
+*136 (MRCItem
+litem &100
 pos 0
 dimension 20
 uid 265,0
 )
-*139 (MRCItem
-litem &104
+*137 (MRCItem
+litem &102
 pos 1
 dimension 50
 uid 266,0
 )
-*140 (MRCItem
-litem &105
+*138 (MRCItem
+litem &103
 pos 2
 dimension 70
 uid 267,0
 )
-*141 (MRCItem
-litem &106
+*139 (MRCItem
+litem &104
 pos 3
 dimension 50
 uid 268,0
 )
-*142 (MRCItem
-litem &107
+*140 (MRCItem
+litem &105
 pos 4
 dimension 80
 uid 269,0
 )
-*143 (MRCItem
-litem &108
+*141 (MRCItem
+litem &106
 pos 5
 dimension 80
 uid 270,0
 )
-*144 (MRCItem
-litem &109
+*142 (MRCItem
+litem &107
 pos 6
 dimension 40
 uid 271,0
 )
-*145 (MRCItem
-litem &110
+*143 (MRCItem
+litem &108
 pos 7
 dimension 100
 uid 272,0
 )
-*146 (MRCItem
-litem &111
+*144 (MRCItem
+litem &109
 pos 8
 dimension 60
 uid 273,0
 )
-*147 (MRCItem
-litem &112
+*145 (MRCItem
+litem &110
 pos 9
 dimension 130
 uid 274,0
 )
-*148 (MRCItem
-litem &113
+*146 (MRCItem
+litem &111
 pos 10
 dimension 56
 uid 275,0
 )
-*149 (MRCItem
-litem &114
+*147 (MRCItem
+litem &112
 pos 11
 dimension 50
 uid 276,0
 )
-*150 (MRCItem
-litem &115
+*148 (MRCItem
+litem &113
 pos 12
 dimension 50
 uid 277,0
 )
-*151 (MRCItem
-litem &116
+*149 (MRCItem
+litem &114
 pos 13
 dimension 80
 uid 278,0
@@ -7658,41 +7560,41 @@ uid 238,0
 cdmCsm &1
 genericsCommonDM (CommonDM
 ldm (LogicalDM
-emptyRow *152 (LEmptyRow
+emptyRow *150 (LEmptyRow
 )
 uid 299,0
 optionalChildren [
-*153 (RefLabelRowHdr
+*151 (RefLabelRowHdr
 )
-*154 (TitleRowHdr
+*152 (TitleRowHdr
 )
-*155 (FilterRowHdr
+*153 (FilterRowHdr
 )
-*156 (RefLabelColHdr
+*154 (RefLabelColHdr
 tm "RefLabelColHdrMgr"
 )
-*157 (RowExpandColHdr
+*155 (RowExpandColHdr
 tm "RowExpandColHdrMgr"
 )
-*158 (GroupColHdr
+*156 (GroupColHdr
 tm "GroupColHdrMgr"
 )
-*159 (NameColHdr
+*157 (NameColHdr
 tm "GenericNameColHdrMgr"
 )
-*160 (TypeColHdr
+*158 (TypeColHdr
 tm "GenericTypeColHdrMgr"
 )
-*161 (InitColHdr
+*159 (InitColHdr
 tm "GenericValueColHdrMgr"
 )
-*162 (PragmaColHdr
+*160 (PragmaColHdr
 tm "GenericPragmaColHdrMgr"
 )
-*163 (EolColHdr
+*161 (EolColHdr
 tm "GenericEolColHdrMgr"
 )
-*164 (LogGeneric
+*162 (LogGeneric
 generic (GiElement
 name "characterBitNb"
 type "positive"
@@ -7700,7 +7602,7 @@ value "8"
 )
 uid 162,0
 )
-*165 (LogGeneric
+*163 (LogGeneric
 generic (GiElement
 name "unitCountBitNb"
 type "positive"
@@ -7715,7 +7617,7 @@ displayShortBounds 1
 editShortBounds 1
 uid 311,0
 optionalChildren [
-*166 (Sheet
+*164 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -7732,40 +7634,40 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "Tahoma,10,0"
 )
-emptyMRCItem *167 (MRCItem
-litem &152
+emptyMRCItem *165 (MRCItem
+litem &150
 pos 2
 dimension 20
 )
 uid 313,0
 optionalChildren [
-*168 (MRCItem
-litem &153
+*166 (MRCItem
+litem &151
 pos 0
 dimension 20
 uid 314,0
 )
-*169 (MRCItem
-litem &154
+*167 (MRCItem
+litem &152
 pos 1
 dimension 23
 uid 315,0
 )
-*170 (MRCItem
-litem &155
+*168 (MRCItem
+litem &153
 pos 2
 hidden 1
 dimension 20
 uid 316,0
 )
-*171 (MRCItem
-litem &164
+*169 (MRCItem
+litem &162
 pos 0
 dimension 20
 uid 163,0
 )
-*172 (MRCItem
-litem &165
+*170 (MRCItem
+litem &163
 pos 1
 dimension 20
 uid 236,0
@@ -7781,44 +7683,44 @@ textAngle 90
 )
 uid 317,0
 optionalChildren [
-*173 (MRCItem
-litem &156
+*171 (MRCItem
+litem &154
 pos 0
 dimension 20
 uid 318,0
 )
-*174 (MRCItem
-litem &158
+*172 (MRCItem
+litem &156
 pos 1
 dimension 50
 uid 319,0
 )
-*175 (MRCItem
-litem &159
+*173 (MRCItem
+litem &157
 pos 2
 dimension 100
 uid 320,0
 )
-*176 (MRCItem
-litem &160
+*174 (MRCItem
+litem &158
 pos 3
 dimension 100
 uid 321,0
 )
-*177 (MRCItem
-litem &161
+*175 (MRCItem
+litem &159
 pos 4
 dimension 50
 uid 322,0
 )
-*178 (MRCItem
-litem &162
+*176 (MRCItem
+litem &160
 pos 5
 dimension 50
 uid 323,0
 )
-*179 (MRCItem
-litem &163
+*177 (MRCItem
+litem &161
 pos 6
 dimension 80
 uid 324,0
@@ -8707,5 +8609,5 @@ pts [
 )
 )
 activeModelName "StateMachine"
-LanguageMgr "Vhdl2002LangMgr"
+LanguageMgr "VhdlLangMgr"
 )

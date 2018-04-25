@@ -1271,6 +1271,7 @@ projectPaths [
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\sineGen.hdp"
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\beamer.hdp"
 "C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\pipelinedOperators.hdp"
+"C:\\Users\\leo.dosreis\\Documents\\GitHub\\Sem-Labs\\Prefs\\morse.hdp"
 ]
 libMappingsRootDir ""
 teamLibMappingsRootDir ""
@@ -2168,7 +2169,7 @@ second ""
 )
 (pair
 first "hierLevel"
-second "1"
+second "3"
 )
 (pair
 first "onPulldownMenu"
@@ -5916,7 +5917,6 @@ activeViewpointIdx 0
 name "pipelinedOperators"
 showingHierarchy 0
 openLibs [
-"pipelinedOperators"
 ]
 declHierarchy [
 ]
@@ -5926,7 +5926,36 @@ activeViewpointIdx 0
 name "pipelinedOperators_test"
 showingHierarchy 0
 openLibs [
-"pipelinedOperators_test"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "Morse"
+showingHierarchy 0
+openLibs [
+"Morse"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "Morse_test"
+showingHierarchy 0
+openLibs [
+"Morse_test"
+]
+declHierarchy [
+]
+activeViewpointIdx 0
+)
+(WorkTab
+name "Board"
+showingHierarchy 0
+openLibs [
+"Board"
 ]
 declHierarchy [
 ]
@@ -5959,6 +5988,7 @@ yPos 0
 width 1296
 height 994
 activeSidePanelTab 2
+activeLibraryTab 1
 sidePanelSize 400
 showUnixHiddenFiles 0
 componentBrowserWidth 300
