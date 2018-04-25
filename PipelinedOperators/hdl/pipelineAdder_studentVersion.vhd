@@ -1,3 +1,11 @@
+-----------------------------------------------------------
+--					Pipeline adder						 --
+--														 --
+--														 --
+--				Leo Dos Reis and Adam True				 --
+--														 --
+-----------------------------------------------------------
+
 ARCHITECTURE studentVersion OF pipelineAdder IS
 
   constant stageBitNb : positive := sum'length/stageNb;
@@ -44,7 +52,7 @@ BEGIN
 					 cIn  => carryIn(i),
 					 cOut => carryOut(i)--carryIn(i+1)
 				  );
-				sum(i*stageBitNb+stageBitNb-1 downto i*stageBitNb) <= sum_int(i)(j);
+				sum(i*stageBitNb+stageBitNb-1 downto i*stageBitNb) <= sum_int(i)(stageNb-1);
 			end generate addition;
 			
 			-- Buffer both numbers
@@ -88,5 +96,5 @@ BEGIN
 		end generate pipelineJ;
 	end generate pipelineI;
   
-	cOut <= carryIn(carryIn'high);
+	cOut <= carryOut(carryOut'high);
 END ARCHITECTURE studentVersion;
